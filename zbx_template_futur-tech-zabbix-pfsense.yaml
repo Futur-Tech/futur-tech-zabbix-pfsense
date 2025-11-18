@@ -1,8 +1,7 @@
 zabbix_export:
-  version: '6.0'
-  date: '2024-05-21T10:34:21Z'
-  groups:
-    - uuid: 7f27dc73981940769811e7fae4a26772
+  version: '7.0'
+  template_groups:
+    - uuid: 2aee3d6f8ccb4888acd3cbff92c60d63
       name: Templates/Futur-Tech/Applications
   templates:
     - uuid: f5c6e5e46ab645a5938110a316cad833
@@ -30,3 +29,6 @@ zabbix_export:
         - macro: '{$PFSENSE_SRVC_MONITORING:"iperf"}'
           value: '0'
           description: 'Disable monitoring of Service iperf Network Performance Testing Daemon/Client'
+        - macro: '{$PFSENSE_SRVC_MONITORING:"sshd"}'
+          value: '2'
+          description: 'Monitoring of Service Secure Shell Daemon. Should NOT be running.'
